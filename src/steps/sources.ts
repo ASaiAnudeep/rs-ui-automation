@@ -19,6 +19,7 @@ Given(/^I add an existing destination "([^"]*)?"$/, async (name) => {
 });
 
 Then(/^I disconnect "([^"]*)?" destination$/, async (name) => {
+  // TODO: use name to select the right destination
   await page.sources.rowDestinationOptions().click();
   await page.sources.btnDisconnectDestination.click();
   await page.sources.btnConfirm.click();
