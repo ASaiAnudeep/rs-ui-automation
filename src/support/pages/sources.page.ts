@@ -13,5 +13,5 @@ export default class SourcesPage {
 
   headerSource(name: string) { return $(`h3=${name}`); }
   rowDestination(name: string) { return $(`div=${name}`); }
-  rowDestinationOptions() { return $(`[aria-label='Context menu']`); }
+  rowDestinationOptions(name: string) { return $(`//div[text()="${name}"]/ancestor::tr//button`); }
 }
