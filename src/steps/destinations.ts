@@ -6,10 +6,10 @@ Given(/^I navigate to events tab$/, async () => {
   await page.destinations.headerEventsDelivery.waitForDisplayed();
 });
 
-Then(/^I check events delivered$/, async () => {
-  await expect(page.destinations.textDelivered).toHaveText("0");
+Then(/^I expect "([^"]*)?" events to be delivered$/, async (expected: string) => {
+  await expect(page.destinations.textDelivered).toHaveText(expected);
 });
 
-Then(/^I check events failed$/, async () => {
-  await expect(page.destinations.textFailed).toHaveText("0");
+Then(/^I expect "([^"]*)?" events to be failed$/, async (expected: string) => {
+  await expect(page.destinations.textFailed).toHaveText(expected);
 });

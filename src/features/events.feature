@@ -4,7 +4,7 @@ Feature: Events
     Given I login to application
     And I select "UI-Automation-Destination" destination
     When I navigate to events tab
-    Then I check events delivered
-    And I check events failed
+    Then I expect "0" events to be delivered
+    And I expect "0" events to be failed
     
     
